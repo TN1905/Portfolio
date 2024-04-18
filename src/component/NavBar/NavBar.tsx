@@ -58,14 +58,15 @@ const NavBar = () => {
 
     window.addEventListener("scroll", scrollActive);
 
-    function checkAttributeNav(container: HTMLElement) {
-      const elements = container.querySelectorAll("[aria-current]");
-      elements.forEach((item) => {
-        item.removeAttribute("aria-current");
+    function checkAttributeNav(name) {
+      name.forEach((item) => {
+        if (item.hasAttribute("aria-current")) {
+          item.removeAttribute("aria-current");
+        }
       });
     }
 
-    function setAttributeCurrent(name: HTMLElement) {
+    function setAttributeCurrent(name) {
       name["setAttribute"]("aria-current", "page");
     }
 
@@ -80,7 +81,7 @@ const NavBar = () => {
       }
     }
 
-    function handlerAddClassList(name: Element, nameClass: string) {
+    function handlerAddClassList(name, nameClass) {
       name.classList.add(nameClass);
     }
 
