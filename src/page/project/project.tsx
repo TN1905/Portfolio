@@ -18,7 +18,7 @@ const Project = () => {
                   Watch Demo
                 </a>
               </p>
-              <p>
+              <p className="ProjectListItemSourcePara">
                 <a
                   href="https://github.com/TN1905/DemoTiki"
                   className="ProjectListItemSourceGithub"
@@ -46,7 +46,7 @@ const Project = () => {
                   Watch Demo
                 </a>
               </p>
-              <p>
+              <p className="ProjectListItemSourcePara">
                 <a
                   href="https://github.com/TN1905/POSSYSTEM"
                   className="ProjectListItemSourceGithub"
@@ -77,7 +77,7 @@ const Project = () => {
                   Watch Demo
                 </a>
               </p>
-              <p>
+              <p className="ProjectListItemSourcePara">
                 <a
                   href="https://github.com/TN1905/ApartmentSystem"
                   className="ProjectListItemSourceGithub"

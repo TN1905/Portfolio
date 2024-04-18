@@ -78,11 +78,15 @@
             color: #e950bb;
           }
         }
+        &Para{
+          margin-top: 20px;
+        }
         &Github {
           border: solid #fff 2px;
           border-radius: 8px;
           color: #fff;
           text-decoration: none;
+          margin-top: 20px;
           padding: 6px 10px;
           font-weight: 600;
           &:hover {
