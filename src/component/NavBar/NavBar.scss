@@ -1,0 +1,62 @@
+@import "../../responsive.scss";
+
+.navBar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  background-color: #0a0119;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(17, 3, 43, 0.8);
+  h5 {
+    font-size: 40px;
+    margin: 0;
+  }
+  &Container {
+    max-width: 1240px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &List {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    @include tablet {
+      display: none;
+    }
+     @include mobile {
+      display: none;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      &:hover {
+        color: rgb(150, 111, 250);
+      }
+    }
+    &Home {
+      margin-right: 40px;
+    }
+    &About {
+      margin: 0 40px;
+    }
+    &Projects {
+      margin: 0 40px;
+    }
+    &Contact {
+      margin-left: 40px;
+    }
+  }
+}
+
+.navBarListHome[aria-current="page"],
+.navBarListAbout[aria-current="page"],
+.navBarListProjects[aria-current="page"],
+.navBarListContact[aria-current="page"] {
+  color: rgb(150, 111, 250);
+}

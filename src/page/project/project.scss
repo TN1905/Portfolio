@@ -1,0 +1,121 @@
+@import "../../responsive.scss";
+
+.Project {
+  padding-top: 120px;
+  &Header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  &List {
+    width: 100%;
+    display: flex;
+    &Item {
+      position: relative;
+      width: 33.3333%;
+      @include desktop {
+        flex: 0 0 50%;
+       max-width: 50%;
+    }
+     @include tablet {
+        flex: 0 0 50%;
+       max-width: 50%;
+    }
+     @include tablet {
+        flex: 0 0 100%;
+       max-width: 100%;
+    }
+      &Img {
+        border-radius: 20px;
+        width: 397px;
+        height: 240px;
+        object-fit: cover;
+        transition: opacity 0.3s ease;
+        &:hover {
+          .ProjectListItemSource {
+            display: block !important;
+          }
+          opacity: 0.6;
+        }
+      }
+      &Title {
+        font-size: 24px;
+        font-weight: 700;
+      }
+      &Lang {
+        display: flex;
+        flex-wrap: wrap;
+        p {
+          font-size: 14px;
+          border: 2px solid #fff;
+          text-align: center;
+          margin: 0 6px 8px 0;
+          border-radius: 10px;
+          padding: 4px 8px;
+        }
+      }
+
+      &Source {
+        display: none;
+        width: 200px;
+        height: 104px;
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        left: 100px;
+        z-index: 1;
+        &Watch {
+          width: 158px;
+          height: 40px;
+          border-radius: 8px;
+          border: 2px;
+          background-color: #fff;
+          color: #000;
+          text-decoration: none;
+          padding: 6px 10px;
+          font-weight: 600;
+          &:hover {
+            background-color: #ffffff;
+            color: #e950bb;
+          }
+        }
+        &Github {
+          border: solid #fff 2px;
+          border-radius: 8px;
+          color: #fff;
+          text-decoration: none;
+          padding: 6px 10px;
+          font-weight: 600;
+          &:hover {
+            background-color: #ffffff;
+            color: #e950bb;
+          }
+        }
+      }
+      &:hover .ProjectListItemSource {
+        display: block !important;
+      }
+    }
+  }
+}
+
+.ProjectList .reveals.active {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.ProjectList .ProjectListItem {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+#progress-bar {
+  height: 3px;
+  background-color: #8562df;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  z-index: 999;
+  transition: 0.1s linear;
+}

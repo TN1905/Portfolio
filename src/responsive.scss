@@ -1,0 +1,39 @@
+$tablet-width: 768px;
+$desktop-width: 992px;
+
+// responsive
+@mixin mobile {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin desktopLarge {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin hideNumberPage {
+  @media (max-width: #{576px - 1px}) {
+    @content;
+  }
+}
+
+@mixin hideIconContact {
+  @media (max-width: 350px) {
+    @content;
+  }
+}

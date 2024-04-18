@@ -1,0 +1,117 @@
+@import "../../responsive.scss";
+
+.Home {
+  
+  @include desktopLarge {
+      display: flex;
+    }
+     @include desktop {
+
+        align-items: center;
+      }
+      @include tablet {
+
+        align-items: center;
+        text-align: center;
+      }
+      @include mobile {
+        max-width: 600px;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+      }
+
+  justify-content: space-between;
+  margin-top: 140px;
+  &Content {
+    
+      @include desktopLarge {
+        flex: 0 1 60%;
+      }
+      @include desktop {
+        max-width: 1000px;
+        align-items: center;
+        margin: 0 auto;
+      }
+      @include tablet {
+        max-width: 800px;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+      }
+      @include mobile {
+        max-width: 600px;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+      }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &Name {
+    font-size: 24px;
+    margin: 0;
+  }
+  &Position {
+    margin: 10px 0 10px 0;
+    font-size: 32px;
+  }
+  &Introduce {
+    font-size: 18px;
+    margin: 0;
+    
+  }
+
+  &Image {
+    @include desktopLarge {
+      flex: 0 1 40%;
+    }
+    @include desktop {
+       position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    }
+    @include tablet {
+       position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    }
+    @include mobile {
+       position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    }
+    
+
+    background-image: url("../../assets/avatar.png");
+
+    background-repeat: no-repeat;
+
+    background-size: contain;
+    height: 400px;
+    z-index: 1;
+  }
+  &Button {
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 32px;
+    padding: 8px 16px;
+    border-radius: 26px;
+    width: 140px;
+    cursor: pointer;
+    background: #fff;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    &:hover {
+      background-color: rgba(241, 239, 239, 0.9);
+    }
+  }
+}

@@ -1,0 +1,271 @@
+@import "../../responsive.scss";
+.About {
+  padding-top: 130px;
+  @include desktop {
+      padding-top: 400px;
+      max-width: 1199;
+      width: 100%;
+    }
+    @include tablet {
+      padding-top: 400px;
+    }
+    @include mobile {
+      padding-top: 400px;
+    }
+
+  &Title {
+    text-align: center;
+     
+  }
+  &Header {
+    font-size: 32px;
+    margin: 0;
+  }
+  &List {
+    list-style-type: none;
+    padding: 0;
+  }
+  &Desc {
+    line-height: 30px;
+    margin: 10px 0;
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      &:hover {
+        color: aqua;
+      }
+    }
+  }
+  &Layout {
+    margin-top: 80px;
+    @include desktopLarge {
+       display: flex;
+    justify-content: space-between;
+    }
+   
+  }
+  &Content {
+    @include desktopLarge {
+        flex: 0 1 30%;
+        display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    }
+    @include desktop {
+       margin-top: 40px;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    }
+    @include tablet {
+       margin-top: 40px;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    }
+    @include mobile {
+       margin-top: 40px;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    }
+   
+    
+  }
+
+  &Skill {
+    @include desktopLarge {
+        width: 60%;
+    }
+
+    @include tablet {
+       
+    }
+    
+    &Title {
+      font-size: 32px;
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
+
+.contentHeaderButton {
+  margin-top: 16px;
+  $borderRadius: 30px;
+  $widthBorder: 58px;
+  @include desktop {
+       position: absolute;
+       left: 40%;
+    }
+     @include tablet {
+       position: absolute;
+       left: 40%;
+    }
+    @include mobile {
+       position: absolute;
+       left: 35%;
+    }
+  .contentHeaderMyCV {
+    border-radius: $borderRadius;
+    border-width: 29px;
+    max-width: 180px;
+    min-width: 180px;
+    max-height: 60px;
+    background-color: transparent;
+    border: 1px solid #9e00b0;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    height: 100%;
+    &::before {
+      border-radius: $borderRadius;
+      transition: 0.2s linear;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: $widthBorder;
+      background: linear-gradient(
+        to left,
+        #ff56f6 27.04%,
+        #406aff 101.43%,
+        #3bace2 100.63%,
+        #b936ee 100%
+      );
+    }
+    &:hover::before {
+      width: 100%;
+    }
+    &:hover {
+      .contentHeaderButtonIcon {
+        border-radius: 29px;
+        left: calc(100% - $widthBorder);
+      }
+      .contentHeaderButtonTitle {
+        right: 30%;
+      }
+    }
+    .contentHeaderButtonIcon {
+      transition: 0.2s linear;
+      background: linear-gradient(
+        to right,
+        #ff56f6 27.04%,
+        #406aff 101.43%,
+        #3bace2 100.63%,
+        #b936ee 100%
+      );
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      width: var(--widthBorder);
+      border-radius: 50%;
+      height: 100%;
+      width: $widthBorder;
+    }
+    .contentHeaderButtonTitle {
+      transition: 0.2s linear;
+      margin-top: 3px;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      user-select: none;
+      position: absolute;
+      right: 10%;
+      margin-right: 10px;
+    }
+    .contentHeaderButtonLayout {
+      margin-top: 3px;
+      font-weight: 500;
+      font-size: 12px;
+      text-transform: uppercase;
+      visibility: hidden;
+    }
+  }
+}
+
+.contentBodySkills {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 0;
+  .contentBodySkill {
+    flex: 0 0 25%;
+    max-width: 25%;
+    @include tablet {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+      align-items: center;
+    }
+    @include mobile {
+      flex: 0 0 50%;
+      max-width: 50%;
+      align-items: center;
+    }
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .contentBodyLogo {
+      background-color: #191a28;
+      width: 120px;
+      height: 120px;
+      position: relative;
+      border-radius: 50%;
+      margin-bottom: 14px;
+      z-index: 1;
+      transition: 0.3s ease;
+
+      &:hover {
+        transform: scale(1.08);
+        &::before {
+          content: "";
+          background-color: #9e00b0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 110%;
+          height: 110%;
+          filter: blur(120px);
+          z-index: -1;
+          border-radius: 50%;
+        }
+      }
+      img {
+        position: absolute;
+        border-radius: px;
+        width: 80%;
+        height: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include tablet {
+         
+  
+       }
+      }
+    }
+  }
+}
+
+.contentBodySkills .reveals.active {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.contentBodySkills .contentBodySkill {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: 0.5s;
+}
